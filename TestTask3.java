@@ -13,17 +13,17 @@ public class TestTask3 {
             rationals[i] = new Rational(n, d);
         }
 
-        System.out.println("First 5 generated numbers ");
+        System.out.println("Первые 5 сгенерированных чисел ");
         for(int i=0; i<5; i++) System.out.print(rationals[i] + "  ");
         System.out.println("\n");
 
         Arrays.sort(rationals);
 
-        System.out.println("Sorted ");
+        System.out.println("Сортировка ");
         Rational smallest = rationals[0];
         Rational largest = rationals[rationals.length - 1];
-        System.out.println("Smallest: " + smallest);
-        System.out.println("Largest:  " + largest + "\n");
+        System.out.println("Маленький: " + smallest);
+        System.out.println("Большой:  " + largest + "\n");
 
         Rational sum = new Rational(0, 1);
         Rational product = new Rational(1, 1);
@@ -33,16 +33,16 @@ public class TestTask3 {
             product = product.multiply(r);
         }
 
-        System.out.println("Aggregates");
-        System.out.println("Sum of all numbers: " + sum);
-        System.out.println("Product of all numbers: " + product + "\n");
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Product: " + product + "\n");
 
         Rational difference = largest.subtract(smallest);
         Rational division = largest.divide(smallest);
 
-        System.out.println("Operations on Max/Min");
-        System.out.println("Difference (Largest - Smallest): " + difference);
-        System.out.println("Division (Largest / Smallest):   " + division);
-        System.out.println("Decimal value of Division:       " + division.doubleValue());
+        System.out.println("Операция max/min");
+        System.out.println("Большой-Маленький: " + difference);
+        System.out.println("Большой/Маленький:   " + division);
+        System.out.println("Десетичное значение деления:       " + division.doubleValue());
     }
 }

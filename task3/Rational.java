@@ -10,7 +10,7 @@ public class Rational extends Number implements Comparable<Rational> {
 
     public Rational(long numerator, long denominator) {
         if (denominator == 0) {
-            throw new ArithmeticException("Denominator cannot be zero");
+            throw new ArithmeticException("Знаменатель не может быть равен нулю");
         }
 
         if (denominator < 0) {
